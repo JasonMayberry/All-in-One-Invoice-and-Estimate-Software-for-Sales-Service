@@ -1,0 +1,28 @@
+
+
+WINDOWS - New PowerShell Script
+######################################################################
+$timestamp = Get-Date -Format o | ForEach-Object { $_ -replace ":", "." }; 
+if(!(Test-Path -path $HOME\Documents\All-In-One-Invoice-Spreadsheets)) { 
+	New-Item -ItemType directory -Path $HOME\Documents\All-In-One-Invoice-Spreadsheets 
+}; 
+$baseNameList = Get-ChildItem $HOME\Documents\All-In-One-Invoices; 
+$baseNameList = $baseNameList | Sort-Object | Foreach-Object { $_.BaseName }; 
+$baseNameList = ,"Title, Date, Customer, Form No., Labor, Goods, Other, Sales Tax, Subtotal, % Amt, Total, Paid/Unpaid, Notes" + 
+                    $baseNameList +
+                    ", , , , , , , , , , , , " +
+                    "TOTALS, , , , , , , , , , , , " +
+                    "Total Labor,=SUM(E:E), , , , , , , , , , , " +
+                    "Total Goods,=SUM(F:F), , , , , , , , , , , " +
+                    "Other,=SUM(G:G), , , , , , , , , , , " +
+                    "Sales Tax,=SUM(H:H), , , , , , , , , , , " +
+                    "Subtotal,=SUM(I:I), , , , , , , , , , , " +
+                    "% Amt,=SUM(J:J), , , , , , , , , , , " +
+                    "Total Sales,=SUM(K:K), , , , , , , , , , , "; 
+$baseNameList > $HOME\Documents\All-In-One-Invoice-Spreadsheets\All-In-One-Invoice-Spreadsheet-$timestamp.csv; 
+explorer $HOME\Documents\All-In-One-Invoice-Spreadsheets;
+######################################################################
+# Same as above in one a Liner
+$timestamp = Get-Date -Format o | ForEach-Object { $_ -replace ":", "." }; if(!(Test-Path -path $HOME\Documents\All-In-One-Invoice-Spreadsheets)) { New-Item -ItemType directory -Path $HOME\Documents\All-In-One-Invoice-Spreadsheets }; $baseNameList = Get-ChildItem $HOME\Documents\All-In-One-Invoices; $baseNameList = $baseNameList | Sort-Object | Foreach-Object { $_.BaseName }; $baseNameList = ,"Title, Date, Customer, Form No., Labor, Goods, Other, Sales Tax, Subtotal, % Amt, Total, Paid/Unpaid, Notes" + $baseNameList + ", , , , , , , , , , , , " + "TOTALS, , , , , , , , , , , , " + "Total Labor,=SUM(E:E), , , , , , , , , , , " + "Total Goods,=SUM(F:F), , , , , , , , , , , " + "Other,=SUM(G:G), , , , , , , , , , , " + "Sales Tax,=SUM(H:H), , , , , , , , , , , " + "Subtotal,=SUM(I:I), , , , , , , , , , , " + "% Amt,=SUM(J:J), , , , , , , , , , , " + "Total Sales,=SUM(K:K), , , , , , , , , , , "; $baseNameList > $HOME\Documents\All-In-One-Invoice-Spreadsheets\All-In-One-Invoice-Spreadsheet-$timestamp.csv; explorer $HOME\Documents\All-In-One-Invoice-Spreadsheets;
+
+
