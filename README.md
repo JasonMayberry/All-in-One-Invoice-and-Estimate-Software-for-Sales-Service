@@ -4,7 +4,7 @@ The Best All-in-One Invoice and Estimate Software for Sales &amp; Service with E
 Buy here:  
 https://www.etsy.com/listing/1038432419/the-best-all-in-one-invoice-and-estimate  
   
-![alt text](https://github.com/JasonMayberry/All-in-One-Invoice-and-Estimate-Software-for-Sales-Service/blob/Master/FirstImage.jpg?raw=true)
+![alt text](https://raw.githubusercontent.com/JasonMayberry/All-in-One-Invoice-and-Estimate-Software-for-Sales-Service/main/FirstImage.jpg)
   
 I had a need to keep track of my sales and print impressive, stylish Estimates and Invoices so I created this pdf software for my own business so for a low price you can use it too! You can accomplish all of the tasks listed below with this All-In-One simple but very effective Estimate and Invoicing System optimized to save you time! This Product is Invoice/Estimate Software For Both Sales and Service Businesses. It's easy to use and you can't beat the price. Amounts Auto-Calculate on a Fillable Adobe PDF document with editable text. All you have to do is enter the labor times & Items etc... It comes with a text heading and a upload Logo image button for a more custom look. QuickBooks can be overwhelming and simply overkill for many small businesses that have a bookkeeper anyway. Use this software to generate a spreadsheet that will have all the data you need on it at tax time!
 
